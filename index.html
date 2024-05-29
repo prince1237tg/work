@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* Basic styles for the navigation bar */
+    nav {
+      background-color: #3498db; /* Blue background */
+      color: white; /* White text */
+      padding: 10px;
+      display: flex; /* Arrange tabs horizontally */
+    }
+
+    /* Style for the individual tabs */
+    nav a {
+      text-decoration: none; /* Remove underline */
+      padding: 10px 20px;
+      border: 1px solid transparent; /* Creates a border outline */
+      transition: background-color 0.3s ease; /* Smooth background color transition */
+    }
+
+    /* Style for the active tab */
+    nav a.active {
+      background-color: #2980b9; /* Darker blue for active tab */
+    }
+
+    /* Hide all content sections by default */
+    section {
+      display: none;
+      padding: 20px;
+    }
+
+    /* Show the "About Me" section by default */
+    #about-me {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about-me" class="active">About Me</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+  </nav>
+
+  <section id="about-me">
+    <h2>About Me</h2>
+    <p>Welcome to my introduction, where I am going to be talking about the BTT course. The BTT course has enhanced my understanding of creating an online business and added more of what technology really is to my knowledge/experience.Technology has always been a big thing, especially in the 21st century. At this point in time, it’s critical for us to use technology such as computers, phones, laptops, etc. Computers can help us excel in our fields such as engineering, computer programming, crime stoppers, police, financial systems, etc. Computers can also help you find out who's hacking or taking your personal belongings from any online account that you may own.This course has taught me how to make an online business and how to manage your finances and computer parts. I never really had anything to do with computers or technology itself. Technology has always been a part of my life. But this class has not been short of experience in learning more about computers and websites. Overall, this was a great experience with the BTT course. My  skills are communication  and computer work and Creativity and innovation.and Problem solving.
+<p> <img src="https://thumbs.dreamstime.com/z/cogs-gears-industrial-global-business-background-background-integration-binary-technology-banner-background-vector-illustration-180798145.jpg" align="center">
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>List your work experience here.</p>
+<a href="Business letter google.pdf">My Resume</a>
+<a href="item.pdf"> 1 Activity </a>
+<a href="All about fluix.pdf"> 2 Activity </a>
+<a href="Prince roll Sneaker-Sheet1.pdf"> 3 Activity </a>  
+</section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>Highlight your skills and expertise.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Showcase your projects here.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>List your educational background here.</p>
+  </section>
+
+  <script>
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Add click event listener to each link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Prevent default anchor tag behavior
+        e.preventDefault();
+
+        // Remove active class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add active class to the clicked link
+        this.classList.add('active');
+
+        // Get the target section ID from the href attribute
+        const targetSectionId = this.getAttribute('href');
+
+        // Hide all sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => section.style.display = 'none');
+
+        // Show the target section
+        document.getElementById(targetSectionId.slice(1)).style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
+
+      
